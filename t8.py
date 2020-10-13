@@ -10,18 +10,20 @@ def nao_entre_em_panico():
     numbers = []
 
     p = 1
+    iterable = 3
 
     while p <= 100:
         is_prime = True
-        for i in range(2, p):
-            if (p % i) == 0:
+        for i in range(2, iterable):
+            if (iterable % i) == 0:
                 is_prime = False
                 break
 
         if is_prime:
-            numbers.append(f"{p}")
+            numbers.append(f"{iterable}")
+            p += 1
 
-        p += 1
+        iterable += 1
 
     return "<br>".join(list(dict.fromkeys(numbers)))
 
